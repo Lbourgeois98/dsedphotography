@@ -50,7 +50,8 @@ export function ServicesSection() {
           <GoldDivider className="my-6" />
           <p className="font-sans text-muted-foreground leading-relaxed">
             From intimate portraits to grand celebrations, every session is crafted with cinematic elegance and artistic
-            intention.
+            intention. I design each shoot to feel effortless while delivering imagery that reads like a film still —
+            timeless, emotive, and unmistakably you.
           </p>
         </div>
 

@@ -6,6 +6,8 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-b from-champagne via-ivory to-cream">
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <span className="font-sans text-xs tracking-[0.3em] uppercase text-gold-dark mb-4 inline-block subtle-fade">D.Sedrick Photography</span>
+        <p className="lead mt-2 subtle-fade">Cinematic portraiture and elevated event experiences — crafted with intention, light, and heart.</p>
         <GoldDivider className="mb-8" />
 
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-charcoal leading-tight text-balance">
@@ -17,8 +19,8 @@ export function HeroSection() {
           Timeless imagery crafted with elegance, emotion, and artistic intention.
         </p>
 
-        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/portfolio" className="btn-gold">
+        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center subtle-fade">
+          <Link href="/portfolio" className="btn-epic">
             View Portfolio
           </Link>
           <Link href="/book-photography" className="btn-outline-gold">

@@ -34,6 +34,7 @@ export function Footer() {
             <p className="mt-6 font-sans text-sm text-ivory/70 leading-relaxed">
               Timeless imagery crafted with elegance, emotion, and artistic intention.
             </p>
+            <p className="mt-3 font-sans text-xs text-ivory/60">Based in Baton Rouge, Louisiana — available for travel.</p>
           </div>
 
           {/* Services */}

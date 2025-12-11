@@ -22,7 +22,8 @@ export function Header() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     router.push(href)
-    window.scrollTo({ top: 0, behavior: "instant" })
+    // smooth scroll to top for a polished transition
+    window.scrollTo({ top: 0, behavior: "smooth" })
     setMobileMenuOpen(false)
   }
 

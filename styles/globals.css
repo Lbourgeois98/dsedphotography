@@ -123,3 +123,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Design helpers */
+.lead {
+  @apply text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto;
+}
+
+.card-elevate {
+  @apply bg-card gold-border rounded-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
+
+.btn-epic {
+  @apply inline-block bg-gold-dark text-ivory px-6 py-3 rounded-md font-medium shadow-sm hover:shadow-lg transition-all duration-300;
+}
+
+.subtle-fade {
+  animation: fadeIn 900ms ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

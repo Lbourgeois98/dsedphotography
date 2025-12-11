@@ -32,7 +32,7 @@ export function FeaturedGallery() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Featured Work</h2>
           <GoldDivider className="my-6" />
-          <p className="font-sans text-muted-foreground leading-relaxed">A glimpse into our cinematic portfolio</p>
+          <p className="font-sans text-muted-foreground leading-relaxed">A curated selection of portraits and moments — each frame crafted to last generations.</p>
         </div>
 
         {/* Gallery Grid */}

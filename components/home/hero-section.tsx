@@ -20,10 +20,10 @@ export function HeroSection() {
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center subtle-fade">
-          <Link href="/portfolio" className="btn-epic">
+          <Link href="/portfolio" className="btn-gold">
             View Portfolio
           </Link>
-          <Link href="/book-photography" className="btn-outline-gold">
+          <Link href="/book-photography" className="btn-gold">
             Book Photography
           </Link>
         </div>

@@ -45,7 +45,7 @@ export function ServicesSection() {
   return (
     <section className="py-24 bg-champagne">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Photography Services</h2>
           <GoldDivider className="my-6" />
           <p className="font-sans text-muted-foreground leading-relaxed">
@@ -55,14 +55,14 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <Link key={service.title} href={service.href} className="group">
-              <div className="bg-card p-8 gold-border text-center transition-all duration-300 hover:bg-cream">
+              <div className="bg-card p-8 gold-border h-full text-center transition-all duration-300 hover:bg-cream hover:-translate-y-1">
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-gold/10 rounded-full mb-6 group-hover:bg-gold/20 transition-colors">
                   <service.icon className="w-6 h-6 text-gold-dark" />
                 </div>
-                <h3 className="font-serif text-2xl text-charcoal mb-3">{service.title}</h3>
+                <h3 className="font-serif text-xl text-charcoal mb-3">{service.title}</h3>
                 <p className="font-sans text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                 <div className="mt-6 flex items-center justify-center gap-2 text-gold-dark opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="font-sans text-sm tracking-wide">View Gallery</span>

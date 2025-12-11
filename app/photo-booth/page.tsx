@@ -58,15 +58,15 @@ export default function PhotoBoothPage() {
       </section>
 
       {/* Sample Image */}
-      <section className="py-12 bg-ivory">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+      <section className="py-16 bg-ivory">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <Image
-              src="/images/prom1.jpg"
-              alt="Magic Mirror Photo Booth sample"
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&h=800&fit=crop"
+              alt="Professional photo booth at event"
               width={1200}
               height={800}
-              className="w-full h-auto rounded-lg object-cover shadow-md"
+              className="w-full h-auto rounded-lg object-cover shadow-lg gold-border"
             />
           </div>
         </div>
@@ -75,18 +75,18 @@ export default function PhotoBoothPage() {
       {/* Features Section */}
       <section className="py-24 bg-ivory">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="font-serif text-3xl md:text-4xl text-charcoal">What Makes It Special</h2>
             <GoldDivider className="my-6" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature) => (
-              <div key={feature.title} className="bg-card p-8 gold-border text-center">
+              <div key={feature.title} className="bg-card p-8 gold-border h-full text-center transition-all duration-300 hover:bg-cream hover:-translate-y-1">
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-gold/10 rounded-full mb-6">
                   <feature.icon className="w-6 h-6 text-gold-dark" />
                 </div>
-                <h3 className="font-serif text-xl text-charcoal mb-3">{feature.title}</h3>
+                <h3 className="font-serif text-lg text-charcoal mb-3">{feature.title}</h3>
                 <p className="font-sans text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -105,7 +105,7 @@ export default function PhotoBoothPage() {
             <Link href="/book-photo-booth" className="btn-gold">
               Book Photo Booth
             </Link>
-            <Link href="/contact" className="btn-outline-gold">
+            <Link href="/contact" className="btn-gold">
               Contact Us
             </Link>
           </div>

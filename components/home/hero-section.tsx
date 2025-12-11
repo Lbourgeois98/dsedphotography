@@ -14,7 +14,7 @@ export function HeroSection() {
             alt="Danyell Sedrick's Photography"
             width={120}
             height={120}
-            className="h-28 w-auto drop-shadow-lg"
+            className="h-28 w-auto"
           />
         </div>
         

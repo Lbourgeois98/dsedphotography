@@ -10,11 +10,39 @@ import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react"
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [submitted, setSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log("Contact form submitted:", formData)
-    setSubmitted(true)
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT
+      
+      if (!formspreeEndpoint) {
+        throw new Error("Form endpoint not configured. Please contact the site administrator.")
+      }
+
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form. Please try again.")
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred")
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -137,6 +165,12 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <p className="font-sans text-sm text-red-800">{error}</p>
+                    </div>
+                  )}
+                  
                   <div>
                     <label htmlFor="name" className="block font-sans text-sm text-charcoal mb-2">
                       Name <span className="text-gold-dark">*</span>
@@ -182,8 +216,8 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button type="submit" className="btn-gold w-full">
-                    Send Message
+                  <button type="submit" disabled={isLoading} className="btn-gold w-full disabled:opacity-50 disabled:cursor-not-allowed">
+                    {isLoading ? "Sending..." : "Send Message"}
                   </button>
                 </form>
               )}

@@ -43,6 +43,7 @@ export default function BookPhotoBoothPage() {
             intro="Reserve the Magic Mirror Photo Booth for your celebration."
             fields={photoBoothFields}
             submitLabel="Submit Photo Booth Request"
+            formEndpoint={process.env.NEXT_PUBLIC_FORMSPREE_PHOTOBOOTH}
           />
         </div>
       </div>

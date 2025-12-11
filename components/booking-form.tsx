@@ -19,17 +19,45 @@ interface BookingFormProps {
   intro: string
   fields: FormField[]
   submitLabel: string
+  formEndpoint?: string
 }
 
-export function BookingForm({ title, intro, fields, submitLabel }: BookingFormProps) {
+export function BookingForm({ title, intro, fields, submitLabel, formEndpoint }: BookingFormProps) {
   const [formData, setFormData] = useState<Record<string, string>>({})
   const [submitted, setSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // In a real app, you would send this data to your backend
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      const formspreeEndpoint = formEndpoint || process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT
+      
+      if (!formspreeEndpoint) {
+        throw new Error("Form endpoint not configured. Please contact the site administrator.")
+      }
+
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form. Please try again.")
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred")
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -61,6 +89,12 @@ export function BookingForm({ title, intro, fields, submitLabel }: BookingFormPr
       </div>
 
       <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
+        {error && (
+          <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+            <p className="font-sans text-sm text-red-800">{error}</p>
+          </div>
+        )}
+        
         {fields.map((field) => (
           <div key={field.name}>
             <label htmlFor={field.name} className="block font-sans text-sm text-charcoal mb-2">
@@ -108,8 +142,8 @@ export function BookingForm({ title, intro, fields, submitLabel }: BookingFormPr
         ))}
 
         <div className="pt-6">
-          <button type="submit" className="btn-gold w-full">
-            {submitLabel}
+          <button type="submit" disabled={isLoading} className="btn-gold w-full disabled:opacity-50 disabled:cursor-not-allowed">
+            {isLoading ? "Submitting..." : submitLabel}
           </button>
         </div>
       </form>

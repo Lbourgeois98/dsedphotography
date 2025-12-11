@@ -32,6 +32,7 @@ export default function BookPhotographyPage() {
             intro="Begin your photography journey with Sedrick. Share your vision below."
             fields={photographyFields}
             submitLabel="Submit Photography Inquiry"
+            formEndpoint={process.env.NEXT_PUBLIC_FORMSPREE_PHOTOGRAPHY}
           />
         </div>
       </div>

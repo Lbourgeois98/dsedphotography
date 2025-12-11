@@ -11,7 +11,6 @@ const footerLinks = {
     { name: "Photo Booth", href: "/photo-booth" },
   ],
   company: [
-    { name: "About", href: "/about" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Contact", href: "/contact" },
   ],

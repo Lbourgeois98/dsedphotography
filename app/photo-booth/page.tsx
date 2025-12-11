@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { GoldDivider } from "@/components/gold-divider"
 import { Lightbulb, Palette, Monitor, Mic, Printer } from "lucide-react"
 
@@ -57,17 +56,19 @@ export default function PhotoBoothPage() {
         </div>
       </section>
 
-      {/* Sample Image */}
+      {/* Video Section */}
       <section className="py-16 bg-ivory">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <Image
-              src="/images/booth.jpg"
-              alt="Professional photo booth at event"
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-lg object-cover shadow-lg gold-border"
-            />
+          <div className="mx-auto w-full aspect-video rounded-lg overflow-hidden shadow-lg gold-border bg-charcoal">
+            <video
+              width="100%"
+              height="100%"
+              controls
+              className="w-full h-full object-cover"
+            >
+              <source src="/images/photobooth.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>

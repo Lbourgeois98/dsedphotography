@@ -88,7 +88,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+13187740473"
                   className="flex items-center gap-4 group p-4 bg-card gold-border hover:bg-gold/5 transition-colors"
                 >
                   <div className="w-12 h-12 bg-gold/10 flex items-center justify-center">
@@ -97,7 +97,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-sans text-xs text-muted-foreground uppercase tracking-wider">Phone</p>
                     <p className="font-sans text-charcoal group-hover:text-gold-dark transition-colors">
-                      (555) 123-4567
+                      318-774-0473
                     </p>
                   </div>
                 </a>
@@ -108,7 +108,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-sans text-xs text-muted-foreground uppercase tracking-wider">Service Area</p>
-                    <p className="font-sans text-charcoal">Los Angeles, CA & Beyond</p>
+                    <p className="font-sans text-charcoal">Baton Rouge, Louisiana & Beyond</p>
                   </div>
                 </div>
               </div>

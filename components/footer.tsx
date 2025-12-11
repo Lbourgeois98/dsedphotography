@@ -76,11 +76,11 @@ export function Footer() {
                 hello@dsphotography.com
               </a>
               <a
-                href="tel:+15551234567"
+                href="tel:+13187740473"
                 className="flex items-center gap-3 font-sans text-sm text-ivory/70 hover:text-gold transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                (555) 123-4567
+                318-774-0473
               </a>
             </div>
             <div className="mt-6 flex gap-4">

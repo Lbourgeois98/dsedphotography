@@ -1,6 +1,7 @@
 import Link from "next/link"
+import Image from "next/image"
 import { GoldDivider } from "@/components/gold-divider"
-import { Lightbulb, Palette, UserCheck, Monitor, Mic, Printer } from "lucide-react"
+import { Lightbulb, Palette, Monitor, Mic, Printer } from "lucide-react"
 
 const features = [
   {
@@ -30,11 +31,6 @@ const features = [
     description:
       "Personalized overlays, digital stickers, signatures, and color themes to match your event's aesthetic.",
   },
-  {
-    icon: UserCheck,
-    title: "Professional Attendant",
-    description: "A friendly, polished on-site assistant from Sedrick ensures everyone looks and feels amazing.",
-  },
 ]
 
 export default function PhotoBoothPage() {
@@ -57,6 +53,21 @@ export default function PhotoBoothPage() {
             <Link href="/book-photo-booth" className="btn-gold">
               Book Photo Booth
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Sample Image */}
+      <section className="py-12 bg-ivory">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+          <div className="mx-auto max-w-3xl">
+            <Image
+              src="/images/prom1.jpg"
+              alt="Magic Mirror Photo Booth sample"
+              width={1200}
+              height={800}
+              className="w-full h-auto rounded-lg object-cover shadow-md"
+            />
           </div>
         </div>
       </section>

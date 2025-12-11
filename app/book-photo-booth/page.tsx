@@ -3,7 +3,7 @@ import { BookingForm } from "@/components/booking-form"
 const photoBoothFields = [
   { name: "name", label: "Full Name", type: "text" as const, placeholder: "Your name", required: true },
   { name: "email", label: "Email Address", type: "email" as const, placeholder: "your@email.com", required: true },
-  { name: "phone", label: "Phone Number", type: "tel" as const, placeholder: "(555) 123-4567", required: true },
+  { name: "phone", label: "Phone Number", type: "tel" as const, placeholder: "318-774-0473", required: true },
   {
     name: "eventType",
     label: "Event Type",

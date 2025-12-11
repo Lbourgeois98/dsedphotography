@@ -3,33 +3,33 @@ import { GoldDivider } from "@/components/gold-divider"
 
 export function PhotoBoothPreview() {
   return (
-    <section className="py-24 bg-ivory">
+    <section className="py-32 bg-ivory">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-        <span className="font-sans text-xs tracking-[0.3em] uppercase text-gold-dark">Featured Experience</span>
-        <h2 className="mt-4 font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight">
+        <span className="font-sans text-xs tracking-[0.3em] uppercase text-gold-dark mb-2 inline-block">Featured Experience</span>
+        <h2 className="mt-6 font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal leading-tight font-normal">
           The Magic Mirror Photo Booth Experience
         </h2>
-        <GoldDivider className="my-6" />
-        <p className="font-sans text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+        <GoldDivider className="my-8" />
+        <p className="font-sans text-lg text-charcoal/75 leading-relaxed max-w-2xl mx-auto">
           Studio-lit event photography — reimagined. Our 65" Magic Mirror Photo Booth features a 43" HD interactive
           touch screen with voice-guided sessions, customizable backgrounds, digital stickers, and signatures. Elevate
           your celebration with instant prints and digital sharing.
         </p>
-        <ul className="mt-8 flex flex-wrap justify-center gap-6">
+        <ul className="mt-12 flex flex-wrap justify-center gap-8">
           {[
             '43" HD interactive touch screen',
             "Voice-guided photo sessions",
             "Instant print & digital sharing",
             "Custom backgrounds & overlays",
           ].map((feature) => (
-            <li key={feature} className="flex items-center gap-3 font-sans text-sm text-charcoal">
-              <span className="w-1.5 h-1.5 bg-gold rotate-45" />
+            <li key={feature} className="flex items-center gap-3 font-sans text-base text-charcoal">
+              <span className="w-2 h-2 bg-gold-dark rounded-full" />
               {feature}
             </li>
           ))}
         </ul>
-        <div className="mt-10">
-          <Link href="/photo-booth" className="btn-gold">
+        <div className="mt-12">
+          <Link href="/photo-booth" className="btn-gold px-8 py-4 text-base">
             Explore Photo Booth
           </Link>
         </div>

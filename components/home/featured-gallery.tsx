@@ -27,16 +27,16 @@ const galleryImages = [
 
 export function FeaturedGallery() {
   return (
-    <section className="py-24 bg-cream">
+    <section className="py-32 bg-cream">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Featured Work</h2>
-          <GoldDivider className="my-6" />
-          <p className="font-sans text-muted-foreground leading-relaxed">A curated selection of portraits and moments — each frame crafted to last generations.</p>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal font-normal">Featured Work</h2>
+          <GoldDivider className="my-8" />
+          <p className="font-sans text-lg text-charcoal/75 leading-relaxed">A curated selection of portraits and moments — each frame crafted to last generations.</p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           <div className="col-span-1 row-span-2">
             <div className="relative h-full min-h-[400px] gold-border overflow-hidden group">
               <Image
@@ -89,8 +89,8 @@ export function FeaturedGallery() {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <Link href="/portfolio" className="btn-outline-gold">
+        <div className="mt-16 text-center">
+          <Link href="/portfolio" className="btn-gold px-8 py-4 text-base">
             View Full Portfolio
           </Link>
         </div>

@@ -62,7 +62,7 @@ export default function PhotoBoothPage() {
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <Image
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&h=800&fit=crop"
+              src="/images/booth.jpg"
               alt="Professional photo booth at event"
               width={1200}
               height={800}

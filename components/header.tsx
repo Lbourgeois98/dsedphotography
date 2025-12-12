@@ -54,13 +54,20 @@ export function Header() {
           ))}
         </div>
 
-        <div className="hidden lg:flex lg:gap-x-4">
+        <div className="hidden lg:flex lg:gap-x-3 items-center">
           <Link
             href="/book-photography"
             onClick={(e) => handleNavClick(e, "/book-photography")}
-            className="btn-gold text-xs px-6 py-2.5"
+            className="btn-gold text-xs px-5 py-2.5"
           >
-            Book
+            Book Photo
+          </Link>
+          <Link
+            href="/book-photo-booth"
+            onClick={(e) => handleNavClick(e, "/book-photo-booth")}
+            className="btn-gold text-xs px-5 py-2.5"
+          >
+            Book Booth
           </Link>
         </div>
 
@@ -84,13 +91,20 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-2 border-t border-gold/10">
+            <div className="pt-4 border-t border-gold/10 space-y-3">
               <Link
                 href="/book-photography"
                 onClick={(e) => handleNavClick(e, "/book-photography")}
-                className="block btn-gold text-center text-xs py-3"
+                className="block btn-gold text-center text-xs py-2.5"
               >
-                Book Session
+                Book Photography Session
+              </Link>
+              <Link
+                href="/book-photo-booth"
+                onClick={(e) => handleNavClick(e, "/book-photo-booth")}
+                className="block btn-gold text-center text-xs py-2.5"
+              >
+                Book Photo Booth
               </Link>
             </div>
           </div>

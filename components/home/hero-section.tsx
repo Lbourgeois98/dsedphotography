@@ -32,7 +32,10 @@ export function HeroSection() {
             View Portfolio
           </Link>
           <Link href="/book-photography" className="btn-gold px-6 py-3 text-sm">
-            Book Now
+            Book Photography
+          </Link>
+          <Link href="/book-photo-booth" className="btn-gold px-6 py-3 text-sm">
+            Book Booth
           </Link>
         </div>
       </div>

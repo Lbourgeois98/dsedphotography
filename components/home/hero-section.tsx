@@ -3,41 +3,38 @@ import { GoldDivider } from "@/components/gold-divider"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 bg-gradient-to-b from-champagne via-ivory to-cream">
+    <section className="relative py-20 md:py-28 bg-gradient-to-b from-champagne via-ivory to-cream">
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto w-full">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto w-full">
         {/* Logo */}
-        <div className="mb-12 subtle-fade flex justify-center">
+        <div className="mb-8 subtle-fade flex justify-center">
           <img
             src="/images/ds.png"
             alt="Danyell Sedrick's Photography"
-            className="h-28 w-auto"
+            className="h-20 w-auto"
           />
         </div>
         
-        <span className="font-sans text-xs tracking-[0.3em] uppercase text-gold-dark mb-6 inline-block subtle-fade">D.Sedrick Photography</span>
-        <p className="lead mt-4 subtle-fade text-lg md:text-xl">Cinematic portraiture and elevated event experiences — crafted with intention, light, and heart.</p>
-        <GoldDivider className="mb-10 mt-10" />
+        <span className="font-sans text-xs tracking-[0.3em] uppercase text-gold-dark mb-4 inline-block subtle-fade">D.Sedrick Photography</span>
+        <GoldDivider className="mb-6 mt-4" />
 
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-charcoal leading-tight text-balance font-normal tracking-tight">
+        <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight text-balance font-normal">
           Cinematic Portraits &<br />
-          <span className="text-gold-dark italic">Elegant Photo Experiences</span>
+          <span className="text-gold-dark">Elegant Experiences</span>
         </h1>
 
-        <p className="mt-10 font-sans text-lg md:text-xl text-charcoal/75 max-w-3xl mx-auto leading-relaxed text-pretty">
-          Timeless imagery crafted with elegance, emotion, and artistic intention. Every frame tells a story worth preserving.
+        <p className="mt-6 font-sans text-base md:text-lg text-charcoal/75 max-w-2xl mx-auto leading-relaxed">
+          Timeless imagery crafted with intention, light, and artistry.
         </p>
 
-        <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center subtle-fade">
-          <Link href="/portfolio" className="btn-gold px-8 py-4 text-base">
+        <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center subtle-fade">
+          <Link href="/portfolio" className="btn-gold px-6 py-3 text-sm">
             View Portfolio
           </Link>
-          <Link href="/book-photography" className="btn-gold px-8 py-4 text-base">
-            Book Photography
+          <Link href="/book-photography" className="btn-gold px-6 py-3 text-sm">
+            Book Now
           </Link>
         </div>
-
-        <GoldDivider className="mt-20" />
       </div>
 
       {/* Scroll indicator removed for a cleaner hero */}

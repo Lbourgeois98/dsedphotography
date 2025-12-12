@@ -74,21 +74,21 @@ export default function PhotoBoothPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-ivory">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="font-serif text-3xl md:text-4xl text-charcoal">What Makes It Special</h2>
-            <GoldDivider className="my-6" />
+      <section className="py-16 sm:py-24 bg-ivory">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-charcoal">What Makes It Special</h2>
+            <GoldDivider className="my-4 sm:my-6" />
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6">
             {features.map((feature) => (
-              <div key={feature.title} className="bg-card p-8 gold-border h-full text-center transition-all duration-300 hover:bg-cream hover:-translate-y-1">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-gold/10 rounded-full mb-6">
-                  <feature.icon className="w-6 h-6 text-gold-dark" />
+              <div key={feature.title} className="bg-card p-4 sm:p-8 gold-border h-full text-center transition-all duration-300 hover:bg-cream hover:-translate-y-1">
+                <div className="inline-flex items-center justify-center w-10 sm:w-14 h-10 sm:h-14 bg-gold/10 rounded-full mb-3 sm:mb-6">
+                  <feature.icon className="w-5 sm:w-6 h-5 sm:h-6 text-gold-dark" />
                 </div>
-                <h3 className="font-serif text-lg text-charcoal mb-3">{feature.title}</h3>
-                <p className="font-sans text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="font-serif text-sm sm:text-lg text-charcoal mb-2 sm:mb-3">{feature.title}</h3>
+                <p className="font-sans text-xs sm:text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>

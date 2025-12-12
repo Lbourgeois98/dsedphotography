@@ -4,7 +4,7 @@ import type React from "react"
 
 import Link from "next/link"
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Menu, X } from "lucide-react"
 
@@ -18,6 +18,20 @@ const navigation = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const router = useRouter()
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.documentElement.style.overflow = "hidden"
+      document.body.style.overflow = "hidden"
+    } else {
+      document.documentElement.style.overflow = ""
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.documentElement.style.overflow = ""
+      document.body.style.overflow = ""
+    }
+  }, [mobileMenuOpen])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -80,29 +94,29 @@ export function Header() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gold/10">
-          <div className="px-4 py-4 space-y-3">
+          <div className="px-4 py-6 space-y-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="block font-sans text-xs tracking-widest uppercase text-charcoal hover:text-gold-dark font-medium"
+                className="block font-sans text-sm tracking-widest uppercase text-charcoal hover:text-gold-dark font-medium py-3 px-2 hover:bg-gold/5 rounded transition-colors"
               >
                 {item.name}
               </Link>
             ))}
-            <div className="pt-3 border-t border-gold/10 space-y-2">
+            <div className="pt-4 border-t border-gold/10 space-y-3">
               <Link
                 href="/book-photography"
                 onClick={(e) => handleNavClick(e, "/book-photography")}
-                className="block btn-gold text-center text-xs py-2"
+                className="block btn-gold text-center text-sm py-3"
               >
                 Book Photography Session
               </Link>
               <Link
                 href="/book-photo-booth"
                 onClick={(e) => handleNavClick(e, "/book-photo-booth")}
-                className="block btn-gold text-center text-xs py-2"
+                className="block btn-gold text-center text-sm py-3"
               >
                 Book Photo Booth
               </Link>

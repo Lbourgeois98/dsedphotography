@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display } from "next/font/google"
+import { Playfair_Display, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Header } from "@/components/header"
@@ -12,9 +12,9 @@ const playfairSerif = Playfair_Display({
   variable: "--font-serif",
 })
 
-const playfairSans = Playfair_Display({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["300", "400", "600", "700"],
   variable: "--font-sans",
 })
 
@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfairSerif.variable} ${playfairSans.variable} font-sans antialiased`}>
+      <body className={`${playfairSerif.variable} ${inter.variable} font-sans antialiased`}>
         <Header />
         {children}
         <Footer />

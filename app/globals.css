@@ -139,6 +139,7 @@
   }
   body {
     @apply bg-ivory text-charcoal;
+    font-family: var(--font-sans, Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial);
   }
 }
 
@@ -153,6 +154,14 @@
   }
 
   .btn-outline-gold {
-    @apply inline-flex items-center justify-center px-8 py-3 border border-gold text-gold-dark font-sans text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-charcoal;
+      @apply inline-flex items-center justify-center px-8 py-3 border border-gold text-gold-dark font-sans text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-charcoal;
   }
 }
+
+  /* Map Tailwind font utility classes to the CSS vars provided by next/font */
+  .font-sans {
+    font-family: var(--font-sans) !important;
+  }
+  .font-serif {
+    font-family: var(--font-serif) !important;
+  }

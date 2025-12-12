@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { GoldDivider } from "@/components/gold-divider"
 
 export function HeroSection() {
@@ -9,11 +8,9 @@ export function HeroSection() {
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto w-full">
         {/* Logo */}
         <div className="mb-12 subtle-fade flex justify-center">
-          <Image
+          <img
             src="/images/ds.png"
             alt="Danyell Sedrick's Photography"
-            width={120}
-            height={120}
             className="h-28 w-auto"
           />
         </div>

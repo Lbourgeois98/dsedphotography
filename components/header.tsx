@@ -28,26 +28,26 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-ivory/95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-md border-b border-gold/10 shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" onClick={(e) => handleNavClick(e, "/")} className="flex items-center">
+        <Link href="/" onClick={(e) => handleNavClick(e, "/")} className="flex items-center shrink-0">
           <Image
             src="/images/ds.png"
             alt="Danyell Sedrick's Photography"
             width={80}
             height={80}
-            className="h-16 w-auto lg:h-20"
+            className="h-14 w-auto lg:h-16"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:gap-x-10">
+        <div className="hidden lg:flex lg:gap-x-8 items-center flex-1 justify-center">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="font-sans text-sm tracking-widest uppercase text-charcoal hover:text-gold-dark transition-colors duration-300"
+              className="font-sans text-sm tracking-widest uppercase text-charcoal hover:text-gold-dark transition-colors duration-300 whitespace-nowrap"
             >
               {item.name}
             </Link>
@@ -58,39 +58,41 @@ export function Header() {
           <Link
             href="/book-photography"
             onClick={(e) => handleNavClick(e, "/book-photography")}
-            className="btn-outline-gold text-xs px-6 py-3"
+            className="btn-gold text-xs px-6 py-2.5"
           >
-            Book Session
+            Book
           </Link>
         </div>
 
         {/* Mobile menu button */}
-        <button type="button" className="lg:hidden text-charcoal" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <button type="button" className="lg:hidden text-charcoal p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </nav>
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-ivory border-t border-gold/20">
-          <div className="px-6 py-4 space-y-4">
+        <div className="lg:hidden bg-white border-t border-gold/10">
+          <div className="px-6 py-6 space-y-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="block font-sans text-sm tracking-widest uppercase text-charcoal hover:text-gold-dark"
+                className="block font-sans text-sm tracking-widest uppercase text-charcoal hover:text-gold-dark font-medium"
               >
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/book-photography"
-              onClick={(e) => handleNavClick(e, "/book-photography")}
-              className="block btn-gold text-center text-xs"
-            >
-              Book Session
-            </Link>
+            <div className="pt-2 border-t border-gold/10">
+              <Link
+                href="/book-photography"
+                onClick={(e) => handleNavClick(e, "/book-photography")}
+                className="block btn-gold text-center text-xs py-3"
+              >
+                Book Session
+              </Link>
+            </div>
           </div>
         </div>
       )}

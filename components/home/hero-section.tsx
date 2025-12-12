@@ -7,18 +7,18 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto w-full">
         {/* Logo */}
-        <div className="mb-8 subtle-fade flex justify-center">
+        <div className="mb-10 subtle-fade flex justify-center">
           <img
             src="/images/ds.png"
             alt="Danyell Sedrick's Photography"
-            className="h-20 w-auto"
+            className="h-28 sm:h-36 md:h-44 w-auto"
           />
         </div>
-        
-        <span className="font-serif text-xs tracking-[0.3em] uppercase text-gold-dark mb-4 inline-block subtle-fade">Danyell Sedrick's Photography</span>
-        <GoldDivider className="mb-6 mt-4" />
 
-        <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight text-balance font-normal">
+        <span className="font-serif text-sm sm:text-xs tracking-[0.26em] uppercase text-gold-dark mb-4 inline-block subtle-fade">Danyell Sedrick's Photography</span>
+        <GoldDivider className="mb-6 mt-3" />
+
+        <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-charcoal leading-tight text-balance font-normal">
           Cinematic Portraits &<br />
           <span className="text-gold-dark">Elegant Experiences</span>
         </h1>
@@ -27,7 +27,7 @@ export function HeroSection() {
           Timeless imagery crafted with intention, light, and artistry.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center subtle-fade flex-wrap">
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center subtle-fade flex-wrap">
           <Link href="/portfolio" className="btn-gold px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm w-full sm:w-auto text-center">
             View Portfolio
           </Link>

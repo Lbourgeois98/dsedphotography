@@ -81,7 +81,7 @@ export default function PhotoBoothPage() {
             <GoldDivider className="my-6" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {features.map((feature) => (
               <div key={feature.title} className="bg-card p-8 gold-border h-full text-center transition-all duration-300 hover:bg-cream hover:-translate-y-1">
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-gold/10 rounded-full mb-6">

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -122,14 +121,16 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--font-sans, Georgia, serif);
   }
 }
 
-/* Force Tailwind font utilities to use the chosen serif to better match logo */
-.font-sans,
+/* Ensure Tailwind font utilities use the CSS variables provided by next/font */
+.font-sans {
+  font-family: var(--font-sans) !important;
+}
 .font-serif {
-  font-family: 'Playfair Display', Georgia, serif !important;
+  font-family: var(--font-serif) !important;
 }
 
 /* Design helpers */

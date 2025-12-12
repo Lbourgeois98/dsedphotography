@@ -35,8 +35,8 @@ const photoBoothFields = [
 
 export default function BookPhotoBoothPage() {
   return (
-    <main className="pt-24 pb-20">
-      <div className="bg-champagne py-16 px-6 lg:px-12 xl:px-20 flex items-center justify-center min-h-[calc(100vh-6rem)]">
+    <main className="pt-20 sm:pt-24 pb-16 sm:pb-20">
+      <div className="bg-ivory py-12 sm:py-16 px-4 sm:px-6 lg:px-12 flex items-center justify-center min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-6rem)]">
         <div className="w-full max-w-xl mx-auto">
           <BookingForm
             title="Book Photo Booth"

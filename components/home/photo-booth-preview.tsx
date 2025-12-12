@@ -3,30 +3,30 @@ import { GoldDivider } from "@/components/gold-divider"
 
 export function PhotoBoothPreview() {
   return (
-    <section className="py-16 md:py-20 bg-ivory">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl text-charcoal leading-tight font-normal">
+    <section className="py-14 sm:py-16 md:py-20 bg-ivory">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-charcoal leading-tight font-normal">
           Magic Mirror Photo Booth
         </h2>
         <GoldDivider className="my-4" />
-        <p className="font-sans text-base text-charcoal/75 leading-relaxed max-w-2xl mx-auto">
+        <p className="font-sans text-sm sm:text-base text-charcoal/75 leading-relaxed max-w-2xl mx-auto">
           Studio-lit event photography reimagined. Interactive touch screen with instant prints and digital sharing.
         </p>
-        <ul className="mt-8 flex flex-wrap justify-center gap-4">
+        <ul className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4">
           {[
             '43" HD touch screen',
             "Voice-guided sessions",
             "Instant prints",
             "Digital sharing",
           ].map((feature) => (
-            <li key={feature} className="flex items-center gap-2 font-sans text-sm text-charcoal">
+            <li key={feature} className="flex items-center gap-2 font-sans text-xs sm:text-sm text-charcoal">
               <span className="w-1.5 h-1.5 bg-gold-dark rounded-full" />
               {feature}
             </li>
           ))}
         </ul>
         <div className="mt-8">
-          <Link href="/photo-booth" className="btn-gold px-6 py-3 text-sm">
+          <Link href="/photo-booth" className="btn-gold px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm inline-block">
             Learn More
           </Link>
         </div>

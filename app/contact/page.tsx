@@ -50,13 +50,13 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="pt-24 pb-20">
+    <main className="pt-20 sm:pt-24 pb-16 sm:pb-20">
       {/* Hero */}
-      <section className="py-16 bg-ivory">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal">Get in Touch</h1>
-          <GoldDivider className="my-8" />
-          <p className="font-sans text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16 bg-ivory">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-charcoal">Get in Touch</h1>
+          <GoldDivider className="my-6 sm:my-8" />
+          <p className="font-sans text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             I'd love to hear from you. Whether you have questions about services, want to discuss a project, or simply
             want to say hello.
           </p>
@@ -64,14 +64,14 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-16 bg-champagne">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <section className="py-12 sm:py-16 bg-champagne">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="font-serif text-2xl md:text-3xl text-charcoal mb-8">Contact Information</h2>
+              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl text-charcoal mb-6 sm:mb-8">Contact Information</h2>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <a
                   href="mailto:hello@dsphotography.com"
                   className="flex items-center gap-4 group p-4 bg-card gold-border hover:bg-gold/5 transition-colors"
@@ -133,21 +133,21 @@ export default function ContactPage() {
               </div>
 
               {/* Quick Book Links */}
-              <div className="mt-10 p-6 bg-card gold-border">
-                <h3 className="font-serif text-lg text-charcoal mb-4">Ready to Book?</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/book-photography" className="btn-gold text-center flex-1">
+              <div className="mt-8 sm:mt-10 p-4 sm:p-6 bg-card gold-border">
+                <h3 className="font-serif text-base sm:text-lg text-charcoal mb-4">Ready to Book?</h3>
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                  <Link href="/book-photography" className="btn-gold text-center text-sm flex-1 px-4 py-2.5">
                     Book Photography
                   </Link>
-                  <Link href="/book-photo-booth" className="btn-outline-gold text-center flex-1">
-                    Book Photo Booth
+                  <Link href="/book-photo-booth" className="btn-gold text-center text-sm flex-1 px-4 py-2.5">
+                    Book Booth
                   </Link>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-card p-8 lg:p-10 gold-border">
+            <div className="bg-card p-5 sm:p-8 lg:p-10 gold-border">
               <h2 className="font-serif text-2xl md:text-3xl text-charcoal mb-2">Send a Message</h2>
               <p className="font-sans text-sm text-muted-foreground mb-8">
                 Fill out the form below and I'll get back to you within 24-48 hours.

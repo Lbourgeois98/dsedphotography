@@ -15,7 +15,7 @@ export function HeroSection() {
           />
         </div>
         
-        <span className="font-sans text-xs tracking-[0.3em] uppercase text-gold-dark mb-4 inline-block subtle-fade">D.Sedrick Photography</span>
+        <span className="font-serif text-xs tracking-[0.3em] uppercase text-gold-dark mb-4 inline-block subtle-fade">Danyell Sedrick's Photography</span>
         <GoldDivider className="mb-6 mt-4" />
 
         <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight text-balance font-normal">

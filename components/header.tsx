@@ -29,14 +29,14 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-md border-b border-gold/10 shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-3 sm:px-6 py-2 sm:py-4 lg:px-8">
         <Link href="/" onClick={(e) => handleNavClick(e, "/")} className="flex items-center shrink-0">
           <Image
             src="/images/ds.png"
             alt="Danyell Sedrick's Photography"
             width={80}
             height={80}
-            className="h-14 w-auto lg:h-16"
+            className="h-10 sm:h-14 w-auto lg:h-16"
           />
         </Link>
 
@@ -72,7 +72,7 @@ export function Header() {
         </div>
 
         {/* Mobile menu button */}
-        <button type="button" className="lg:hidden text-charcoal p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <button type="button" className="lg:hidden text-charcoal p-1" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </nav>
@@ -80,29 +80,29 @@ export function Header() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gold/10">
-          <div className="px-6 py-6 space-y-4">
+          <div className="px-4 py-4 space-y-3">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="block font-sans text-sm tracking-widest uppercase text-charcoal hover:text-gold-dark font-medium"
+                className="block font-sans text-xs tracking-widest uppercase text-charcoal hover:text-gold-dark font-medium"
               >
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 border-t border-gold/10 space-y-3">
+            <div className="pt-3 border-t border-gold/10 space-y-2">
               <Link
                 href="/book-photography"
                 onClick={(e) => handleNavClick(e, "/book-photography")}
-                className="block btn-gold text-center text-xs py-2.5"
+                className="block btn-gold text-center text-xs py-2"
               >
                 Book Photography Session
               </Link>
               <Link
                 href="/book-photo-booth"
                 onClick={(e) => handleNavClick(e, "/book-photo-booth")}
-                className="block btn-gold text-center text-xs py-2.5"
+                className="block btn-gold text-center text-xs py-2"
               >
                 Book Photo Booth
               </Link>
